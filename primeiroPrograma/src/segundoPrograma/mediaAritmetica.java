@@ -1,6 +1,6 @@
 package segundoPrograma;
 
-public class decimoPrimeiro {
+public class mediaAritmetica {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -8,3 +8,5 @@ public class decimoPrimeiro {
 	}
 
 }
+
+//Quando não sabemos quantos valores serão lidos usamos o while
