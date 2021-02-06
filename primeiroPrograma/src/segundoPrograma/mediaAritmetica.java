@@ -11,23 +11,25 @@ public class mediaAritmetica {
 		int valor = scn.nextInt(); //Valor digitado pelo usúario se ra guardado aqui 3º passo
 		double media = 0; // Média double para possobilitar a média com casas decimais 4º passo
 		double soma = 0; // Soma como double para somar também com casas decimais 5º passo
-		int numeros = 0; // Váriavel para guardar a quantidade de nuemros digitados 6º passo
+		int numeros = 0; // Váriavel para guardar a quantidade de nuemros digitados, essa váriavel conta os numeros 6º passo
 		int maior = valor; // Variável para guardar o maior valor digitado pelo usuário 7º passo
 		int menor = valor; // Variável para digitar o menor valor digitado pelo usuário 8º passo
 		
 		//Processamento de dados
 		
-		while(valor != -1) {
+		while(valor != -1) {// O Programa fica ativo até essa variável ser verdadeira
 			
 			soma = soma + valor;  // Guarda o valor digitado junto com a soma se começa com 0 e vai aumentando conforme dados inseridos
 			numeros++;
-			System.out.println("Digite o valor: ");
-			valor = scn.nextInt();
+			
 			
 			if (valor >maior) 
 				maior = valor;
 			 else if(valor < menor)
 				menor = valor;
+			
+			System.out.println("Digite o valor: ");// Neste caso o usuario ao digitar -1 o programa termina.
+			valor = scn.nextInt();
 			
 		}
            
