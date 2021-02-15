@@ -1,5 +1,6 @@
 package terceiroPrograma.sisAlucar;
 
+import java.time.LocalDate;
 import java.util.Locale;
 
 public class sisalucarAPP {
@@ -36,8 +37,21 @@ public class sisalucarAPP {
 		locação.idCarro = idCarro;
 		locação.idCliente = idCliente;
 		locação.idLocação = 1;
-	
+		locação.datainicio = LocalDate.now(); //Usuário Aloca o carro hoje
+		locação.datafim = LocalDate.now().plusDays(2); //Usuário devolve daqui a dois dias o carro.
+	    locação.valorLocado = 2 * 99.90f;
 		
 		}
-
+       //Criar um método gerarRelatótioLocação que mostre todas as locações realizadas nos ultimos 5 dias, crie pelo menos uma variável local 
+	   //para calcular o total faturado neste período.
+	
+	  // public void gerarRelatórioLocação(LocalDate datainicial, LocalDate dataFinal) { Exemplos de variáveis locais, só visíveis pelo método
+	
+	    public void gerarRealtórioLocação(LocalDate...datas) { // Exemplo de varargs para descrever quantas variáveis possíveis do código do desenvolvedor
+		  
+		  float totalFaturado = 2 * 99.90f; // Cria uma variável locação que mostra o total faturado.
+		  
+		  
+		  
+	  }
 }
