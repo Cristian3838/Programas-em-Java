@@ -23,10 +23,10 @@ public class Conta {// Criação da classe Conta
            String nome;
            
            
-           public boolean saca(double valor) // Cria um método double do tipo boolena que retorna verdadeiro ou falso
+           public boolean saca(double valor) // Cria um método construtor double do tipo boolena que retorna verdadeiro ou falso
            {
         	   
-        	   return false; // Como foi criado um método do tipo boolean é obrigatório retornar ou veradeiro ou falso
+        	   return false; // Como foi criado um método construtor do tipo boolean é obrigatório retornar ou veradeiro ou falso
            
            }
            
