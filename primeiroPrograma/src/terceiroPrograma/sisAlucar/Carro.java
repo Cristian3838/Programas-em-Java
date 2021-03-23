@@ -2,6 +2,10 @@ package terceiroPrograma.sisAlucar;
 
 //Criar atributos e metodos para a classe 
 //Carro ( idCarro, placa, fabricante, modelo, ano, cor, valorDiaria)
+//Na Classe Carro criar um atributo de classe Revendedor do tipo enumeration com as seguintes propriedades de um revendedor de carros
+//cnpj, endereço, fabricante.
+
+
 
 
 public class Carro { //Classe Carro
@@ -13,9 +17,11 @@ public class Carro { //Classe Carro
 	int ano; // Atributo ano
 	String cor; // Atributo cor
 	float valorDiaria; // Atributo valorDiaria
+	Revendedor revendedor; // Queremos saber de qual revendedor compramos aquele determinado carro.
 	
 	
-	public Carro(long idCarro, String placa,String fabricante,String modelo,int ano,String cor,float valorDiaria) { // Cria um método construtor
+	
+	public Carro(long idCarro, String placa,String fabricante,String modelo,int ano,String cor,float valorDiaria, Revendedor revendedor) { // Cria um método construtor
 	//passando como parâmetro os atributos definidos acima.
 	
 	super(); //Chama o construtor da super classe
@@ -26,6 +32,7 @@ public class Carro { //Classe Carro
 	this.ano = ano;
 	this.cor = cor;
 	this.valorDiaria = valorDiaria;
+	this.revendedor = revendedor; 
 }
 	
 	
@@ -37,7 +44,7 @@ public class Carro { //Classe Carro
     	
     	
     	
-    	Carro carro1 = new Carro(1, "ABC-0001", "Volks", "Gol", 2013, "Azul", 99.90f);
+    	Carro carro1 = new Carro(1, "ABC-0001", "Volks", "Gol", 2013, "Azul", 99.90f, Revendedor.EMANUELVEÍCULOS);
     	Carro carro2 = new Carro(); // Este objeto vazio só foi aceito pois criamos um método construtor acima vazio.
     	
     
