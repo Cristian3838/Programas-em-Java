@@ -1,4 +1,5 @@
 package quartoPrograma;
+import quartoPrograma.Conta;
 
 //Crie a classe Conta conforme o diagrama abaixo:
 
@@ -18,10 +19,11 @@ public class Conta {// Criação da classe Conta
 	
 	       //Atributos
            private int numero;
-           private double saldo;
+           public double saldo;
            private double limite;
            private Cliente cliente[];
-		
+           public double valor;
+		   
            
            
            public int getNumero() {
@@ -74,6 +76,11 @@ public class Conta {// Criação da classe Conta
         	   
         	   
            }
+           public void atualiza(double taxa){
+        	   this.saldo = this.saldo + this.saldo*taxa;
+        	   
+        	   
+           }
            
            public void transfere(Conta destino, double valor) {
         	   if(valor<=saldo) {
@@ -83,6 +90,10 @@ public class Conta {// Criação da classe Conta
         		   
         		   System.out.println("Não foi possível realizar a transferência");
         	   }
+        	   
+        	   
+        	   
+        	   
         	   
            }
            

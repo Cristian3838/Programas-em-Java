@@ -103,6 +103,23 @@ public class Carro extends Veiculo{ //A Classe Carro agora é filha da classe Vei
 	public Carro() {//Cria um método construtor vazio para criarmos ou declararmos objetos vazios
 		
 	}
+	
+	public int getPassageiros() {//Exemplo de anulação
+		return 4;
+		
+	}
+	
+	public void acelera(int limiteVelocidade) {// Exemplo de Sobrecarga
+		
+		System.out.println("Obedeça o limite de velocidade que é: " + limiteVelocidade);
+		
+	}
+	
+	public void Abastecer(int quantidadeLitros) {
+		
+		System.out.println("Para abastecer o cerro é necessário: " + quantidadeLitros);
+		
+	}
     public static void main(String[] args) {// Cria um método construtor para passarmos os valores das variáveis declaradas referente aos atributos declarados
     	//dentro da classe.
     	
