@@ -1,4 +1,4 @@
-package terceiroPrograma;
+package quartoPrograma;
 
 //Crie a classe Conta conforme o diagrama abaixo:
 
@@ -19,8 +19,8 @@ public class Conta {// Criação da classe Conta
 	       //Atributos
            private int numero;
            private double saldo;
-           double limite;
-           private String nome;
+           private double limite;
+           private Cliente cliente[];
 		
            
            
@@ -48,29 +48,41 @@ public class Conta {// Criação da classe Conta
 			this.limite = limite;
 		}
 
-		public String getNome() {
-			return nome;
+		public Cliente[] getCliente() {
+			return cliente;
 		}
 
-		public void setNome(String nome) {
-			this.nome = nome;
+		public void setCliente(Cliente[] cliente) {
+			this.cliente = cliente;
 		}
 
 		public boolean saca(double valor) // Cria um método construtor double do tipo boolena que retorna verdadeiro ou falso
            {
+        	   if(valor<=saldo) {
+        		   saldo = saldo-valor;
+        		   return true;
+        		   }
+        	   else{
         	   
-        	   return false; // Como foi criado um método construtor do tipo boolean é obrigatório retornar ou veradeiro ou falso
-           
+        		   return false;// Não conseguiu realizar o saque
+        	   
+        		   }
            }
            
            public void deposita(double valor){
-        	   
+        	   saldo = saldo+valor;
         	   
         	   
            }
            
            public void transfere(Conta destino, double valor) {
-        	   
+        	   if(valor<=saldo) {
+        		   saldo = saldo - valor;
+        		   destino.deposita(valor);
+        	   }else {
+        		   
+        		   System.out.println("Não foi possível realizar a transferência");
+        	   }
         	   
            }
            
@@ -79,9 +91,7 @@ public class Conta {// Criação da classe Conta
            //a leitura deste código seria "conta1 tranfere para a conta2 50 reais
            
            public static void main(String[] args) {
-			Conta conta1 = new Conta(); // Cria o objeto conta
-					Conta conta2 = new Conta();  // Cria o segundo objeto conta
-					
-					conta1.transfere(conta2, 50); //a leitura deste código seria "conta1 tranfere para a conta2 50 reais
+			Conta conta = new Conta(); // Cria o objeto conta
+			conta.cliente = new Cliente[5];	// Cria a relação de 1 até 5 clientes	
 		}
 }
