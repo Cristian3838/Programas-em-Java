@@ -8,7 +8,7 @@ package quartoPrograma.sisAlucar;
 
 
 
-public class Carro { //Classe Carro
+public class Carro extends Veiculo{ //A Classe Carro agora é filha da classe Veiculo
 	
 	private long idCarro; //Atributo idCarro
 	private String placa; //Atributo placa
@@ -110,7 +110,11 @@ public class Carro { //Classe Carro
     	
     	Carro carro1 = new Carro(1, "ABC-0001", "Volks", "Gol", 2013, "Azul", 99.90f, Revendedor.EMANUELVEÍCULOS);
     	Carro carro2 = new Carro(); // Este objeto vazio só foi aceito pois criamos um método construtor acima vazio.
-    	
+    	carro1.acelera();
+    	carro1.freia();
+    	carro1.getPassageiros();
+    	carro1.getVelocidade();
+    	carro1.autonomia = 40;
     
     }
 
