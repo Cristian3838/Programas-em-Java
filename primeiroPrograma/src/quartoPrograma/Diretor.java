@@ -4,6 +4,12 @@ public class Diretor extends Funcionario {// Criada a Sub classe Diretor como fi
 
 	
 	   String departamento;
+
+	@Override
+	public void getBonificação() {
+		// TODO Auto-generated method stub
+		
+	}
 	   
 	   
 	   
