@@ -40,6 +40,11 @@ public abstract class Funcionario {// Criada a Superclasse Funcionário
           
           public abstract void getBonificação();
           
+          Professor prof = new Professor(); // Criação de um objeto
+          Autenticavel aut = prof; // Interface recebendo referencia de um objeto.
+          Cidadao cidadeo = prof; // Interface recebendo referencia de um objeto.
+          Contribuinte contribuinte = prof; // Interface recebendo referencia de um objeto.
+          
         	  
         	  
           
